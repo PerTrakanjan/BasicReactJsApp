@@ -1,5 +1,5 @@
 import React from "react";
-import "./Timeline.css"; // You can define your styles here
+import "./TimeLine.css"; // You can define your styles here
 import TimeLineEvent from "./TimeLineEvent";
 
 const events = [
@@ -18,14 +18,29 @@ const events = [
 
 export default function TimeLine() {
   return (
-    <div className="mx-auto justify-center items-center">
-      <div className=" container relative bg-slate-400 w-1/2 p-1">
-        <div className=" relative max-w-7xl m-28">
-          <h2>Concert</h2>
-          <small>2018 - 2019</small>
-          <p>Arists perform them music.</p>
+    <>
+      <div className=" m-0 p-0 box-border">
+        <div className="timeline">
+          <div className="timeline-container rounded-md left-timeline-containerr">
+            <img src="images/tattoo-01-small.jpg" />
+            <div className="text-box relative  bg-slate-100 rounded-md">
+              <h2>Concert</h2>
+              <small>2018 - 2019</small>
+              <p>Arists perform them music.</p>
+              <span className="left-timeline-containerr-arrow"></span>
+            </div>
+          </div>
+          <div className="timeline-container rounded-md right-timeline-container">
+            <img src="images/tattoo-02-small.jpg" />
+            <div className="text-box relative bg-slate-100 rounded-md">
+              <h2>Concert</h2>
+              <small>2018 - 2019</small>
+              <p>Arists perform them music.</p>
+              <span className="right-timeline-container-arrow"></span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

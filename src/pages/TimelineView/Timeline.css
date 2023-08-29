@@ -1,23 +1,122 @@
 .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;    
 }
 
-.timeline-event {
-    display: flex;
-    margin-bottom: 20px;
+.timeline-container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%; 
+    animation: movedown 1s linear forwards;
+    opacity: 0;   
 }
 
-.timeline-date {
-    min-width: 80px;
-    padding-right: 10px;
-    text-align: right;
+@keyframes movedown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
-.timeline-content {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.timeline-container :nth-child(1){
+    animation-delay: 0s;
+}
+.timeline-container :nth-child(1) {
+    animation-delay: 1s;
+}
+.timeline-container :nth-child(2) {
+    animation-delay: 2s;
+}
+.timeline-container :nth-child(3) {
+    animation-delay: 4s;
+}
+
+.text-box {
+    padding: 20px 30px;
+}
+
+.left-timeline-container {
+    left: 0;
+}
+
+.right-timeline-container {
+    left: 50%;
+}
+
+.timeline-container img {
+    position: absolute;
+    width: 12%;
+    height: 50%;
+    border-radius: 50%;
+    right: -30px;
+    top: 30 px;
+    z-index: 10;
+}
+
+.right-timeline-container img {
+    left: -30px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #4e4e4e;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.left-timeline-containerr-arrow {
+    position: absolute;
+    top: 28px;
+    right: -15px ;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;    
+    border-left: 15px solid #4e4e4e;
+    z-index: -1;
+}
+
+.right-timeline-container-arrow {
+    position: absolute;
+    top: 28px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #4e4e4e;
+    z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline {
+        margin: 50px auto;
+    }
+    
 }

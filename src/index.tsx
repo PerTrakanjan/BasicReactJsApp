@@ -4,13 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import OrderGrid from "./pages/OrderGrid";
+import PortTest from "./pages/PortTest";
+import TimeLine from "./pages/TimelineView/TimeLine";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <OrderGrid />
+    <TimeLine />
   </React.StrictMode>
 );
 

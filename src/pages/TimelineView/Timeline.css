@@ -50,10 +50,10 @@
 
 .timeline-container img {
     position: absolute;
-    width: 12%;
-    height: 50%;
+    width: 4rem;
+    height: 48%;
     border-radius: 50%;
-    right: -30px;
+    right: -35px;
     top: 30 px;
     z-index: 10;
 }
@@ -120,3 +120,11 @@
     }
     
 }
+
+@media screen and (max-width: 600px) {
+    .timeline-container img {
+        width: 4rem;
+        height: 30%;
+    }
+}
+
